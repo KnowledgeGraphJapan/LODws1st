@@ -31,7 +31,7 @@ where {
 LIMIT 100
 ```
 
-　↓　PREFIXを用いた省略表現
+## 検索例1-3：PREFIXを用いた省略表現
 
 ```PREFIX wd: <http://www.wikidata.org/entity/>
 
