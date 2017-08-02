@@ -1,4 +1,5 @@
 #  関心のあるリソースのIRIを探す
+
 例）大阪大学のWikidata上でのIRI　　
   [http://www.wikidata.org/entity/Q651233](http://www.wikidata.org/entity/Q651233)
 ---
