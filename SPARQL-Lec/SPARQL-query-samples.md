@@ -2,11 +2,11 @@
 
 「大阪大学」を主語（Subject）に含むトリプルの述語（?p）と目的語（?o）を取得する　
 
----------
-select *
+```select *
 where { 
    <http://www.wikidata.org/entity/Q651233> ?p ?o . 
 }
 LIMIT 100
+```
 ---------------
 
