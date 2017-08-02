@@ -17,13 +17,18 @@
 １１：５０－１２：３０　LOD用クエリ言語SPARQLの基礎（基本編）   
 １２：３０－１３：３０　昼食休憩   
 １３：３０－１４：３０　LOD用クエリ言語SPARQLの基礎（実践編）    
-１４：３０－１５：３０　RDFデータベースの導入方法   
+１４：３０－１５：３０　RDFデータベース（トリプルストア）の導入   
 １５：３０－１５：４０　休憩   
 １５：４０ー１６：４０　LOD活用ツール・ライブラリの紹介   　
 
 ## LOD用クエリ言語SPARQLの基礎　
-## RDFデータベースの導入方法　　
+[資料置き場](https://github.com/KnowledgeGraphJapan/LODws1st/tree/master/SPARQL-Lec)
+
+## RDFデータベース(トリプルストア)の導入方法
+[資料置き場](https://github.com/KnowledgeGraphJapan/LODws1st/tree/master/RDF-DB)
+
 ## LOD活用ツール・ライブラリの紹介　　
+[資料置き場](https://github.com/KnowledgeGraphJapan/sparql-library-examples)
 
 ---
 本ワークショップに関する問い合わせ先
