@@ -144,8 +144,48 @@ where {
   ?s wdt:P31 wd:Q3918. 
 }LIMIT 100
 ```
+---
 
+# 検索例5：複数パターンの組み合わせ
 
+## 例5-1)複数の述語を指定して，目的語を取得する
+
+「大阪大学」の“本部所在地”と“創立日”取得する
+
+```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+select ?o1 ?o2 where { 
+  wd:Q651233 wdt:P159 ?o1.
+  wd:Q651233 wdt:P571 ?o2.
+}
+```
+## 例5-2：述語と目的語を指定し，主語の一覧を取得（ラベルを併記）
+
+「大学」のインスタンスの一覧と，その“日本語ラベル付き”を取得する
+```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?s ?o where {
+  ?s wdt:P31 wd:Q3918.
+  ?s rdfs:label ?o . 
+  FILTER (lang(?o) = "ja") . 
+}LIMIT 100
+```
+## 例5-3：述語と目的語を指定し，主語の一覧を取得（あれば，ラベルを併記）
+
+「大学」のインスタンスの一覧を取得し，その“日本語ラベル付き”があれば，取得する
+```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?s ?o where { 
+  ?s wdt:P31 wd:Q3918.
+  OPTIONAL{
+    ?s rdfs:label ?o . 
+    FILTER (lang(?o) = "ja") . 
+  }
+}LIMIT 100
+```
 
 
 
