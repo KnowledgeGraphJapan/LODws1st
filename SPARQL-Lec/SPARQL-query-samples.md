@@ -187,5 +187,87 @@ select ?s ?o where {
 }LIMIT 100
 ```
 
+## 例5-4：主語の述語と，その目的語の述語を指定
+
+「大阪大学」の“本部所在地”と，その“日本語ラベル”取得する
+```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+select ?o1 ?o2 where { 
+  wd:Q651233 wdt:P159 ?o1 .
+  ?o1 rdfs:label ?o2 . 
+  FILTER (lang(?o2) = "ja") .
+}
+```
+## 例5-5：主語の述語と，その目的語の述語を指定
+
+「大阪大学」の“クラス”と，「大阪大学」 の“卒業生”＝「大阪大学を“educated-at”の目的語とする主語（?s）」を取得得する
+```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+select ?o1 ?o2 where {
+  wd:Q651233 wdt:P31 ?o1 .
+  ?o2 wdt:P69 wd:Q651233 .
+}
+```
+
+## 例5-6：主語と目的語の組み合わせ
+
+「大学」と「卒業生」の組み合わせを取得する
+```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+select ?s ?univ where { 
+ ?univ wdt:P31  wd:Q3918. 
+ ?s       wdt:P69  ?univ .
+}LIMIT 100
+```
+## 例5-7：主語と目的語の組み合わせ（日本語ラベル併記）
+
+「大学」と「卒業生」の組み合わせを取得する．日本語のラベルを併記
+```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?univ ?univl ?s ?l where {
+  ?univ wdt:P31 wd:Q3918. 
+  ?s wdt:P69 ?univ.
+  OPTIONAL{
+    ?univ rdfs:label ?univl . 
+    FILTER (lang(?univl) = "ja") . 
+    ?s rdfs:label ?l . 
+    FILTER (lang(?l) = “ja”) .
+  }
+}LIMIT 100
+```
+---
+# 検索例６：カウントを利用したランキング
+
+## 例６-1) カウントの利用
+「大学」のインスタンスの数を取得する
+```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+select (count (?s) AS ?c) where { 
+  ?s wdt:P31 wd:Q3918.
+}
+```
+## 例6-2) 組み合わせのカウント
+「大学」と「卒業生の数」の組み合わせをランキング
+```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?univ ?univl　(count(?s) As ?c) where {
+  ?univ wdt:P31 wd:Q3918.
+  ?s wdt:P69 ?univ.
+  OPTIONAL{
+    ?univ rdfs:label ?univl . 
+    FILTER (lang(?univl) = "ja") . 
+  }
+}GROUP BY ?univ ?univl
+ORDER BY DESC(?c)
+LIMIT 100
+```
 
 
