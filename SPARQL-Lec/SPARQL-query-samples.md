@@ -1,8 +1,8 @@
 
 # 必要なリンク集
 ## WikidataのSPARQLエンドポイント（検索用API）
-https://query.wikidata.org/   
-※プログラムからアクセスする場合は，   
+https://query.wikidata.org/      
+※プログラムからアクセスする場合は，   
 https://query.wikidata.org/sparql   
 
 ## PREFIXの検索サービス
