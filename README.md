@@ -1,6 +1,9 @@
 # 第1回Linked Open Data (LOD) 活用ワークショップ【資料共有用】
 [第1回Linked Open Data (LOD) 活用ワークショップ](http://peatix.com/event/280261)の資料を共有するためのレポジトリです．
 
+## 参加者アンケート
+https://goo.gl/forms/ue2OeBOlM876nBqh1
+
 ---
 # 講演セッション
 ## Linked Open Data（LOD）の基礎技術
