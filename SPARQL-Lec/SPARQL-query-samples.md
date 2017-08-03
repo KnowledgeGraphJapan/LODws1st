@@ -104,5 +104,48 @@ where {
 }LIMIT 100
 ```
 
+---
+
+# 検索例4：述語と目的語を指定
+
+## 例）4-1：「国が“日本”と一致する」トリプルの主語（?s）を取得する
+```PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+select ?s
+where { 
+ ?s wdt:P17 wd:Q17 . 
+}
+LIMIT 100
+```
+## 例）4-2： 「ラベルが“大阪大学”と一致する」トリプルの主語（?s）を取得する
+```PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+select ?s
+where { 
+ ?s rdfs:label "大阪大学"@ja . 
+}LIMIT 100
+```
+## 例）4-3)「大阪大学」のクラス（何のインスタンスか？）を取得する
+```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+select ?o
+where { 
+ wd:Q651233  wdt:P31 ?o. 
+}
+```
+## 例4-4)「大学」のインスタンスの一覧を取得する
+```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+select ?s
+where { 
+　?s wdt:P31 wd:Q3918. 
+}LIMIT 100
+```
+
+
+
 
 
