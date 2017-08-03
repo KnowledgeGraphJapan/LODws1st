@@ -141,7 +141,7 @@ where {
 PREFIX wd: <http://www.wikidata.org/entity/>
 select ?s
 where { 
-　?s wdt:P31 wd:Q3918. 
+  ?s wdt:P31 wd:Q3918. 
 }LIMIT 100
 ```
 
