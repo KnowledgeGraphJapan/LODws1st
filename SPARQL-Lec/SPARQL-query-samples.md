@@ -3,8 +3,7 @@
 ## WikidataのSPARQLエンドポイント（検索用API）
 https://query.wikidata.org/      
 ※プログラムからアクセスする場合は，   
-
-https://query.wikidata.org/sparql   
+こちら https://query.wikidata.org/sparql  　 
 
 ## PREFIXの検索サービス
 https://prefix.cc/
