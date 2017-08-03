@@ -80,25 +80,27 @@ where {
 
 # 検索例3：FILTERによる絞り込み
 
-## 例3-1)「大阪大学」のラベルとなる目的語（?o）から，“日本語のラベルのみ”を取得
+## 例3-1)「大阪大学」のラベルとなる目的語（?o）から，“日本語のラベルのみ”を取得
 
 ```PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 select distinct ?o
 where { 
-   wd:Q651233 rdfs:label ?o .    FILTER (lang(?o) = "ja") . 
+   wd:Q651233 rdfs:label ?o . 
+   FILTER (lang(?o) = "ja") . 
 }LIMIT 100
 ```
 
-## 例3-2)「大阪大学」のラベルとなる目的語（?o）のうち，“Osaka”という文字列を含むもの取得
+## 例3-2)「大阪大学」のラベルとなる目的語（?o）のうち，“Osaka”という文字列を含むもの取得
 
 ```PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 select distinct ?o
 where { 
-   wd:Q651233 rdfs:label ?o .    FILTER (regex(?o,"Osaka")) . 
+   wd:Q651233 rdfs:label ?o . 
+   FILTER (regex(?o,"Osaka")) . 
 }LIMIT 100
 ```
 
