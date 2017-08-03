@@ -1,7 +1,7 @@
 
 # 必要なリンク集
 ## SPARQL 1.1 Query Language (W3C Recommendation)
-https://www.w3.org/TR/sparql11-query/
+https://www.w3.org/TR/sparql11-query/   
 →日本語訳　http://www.asahi-net.or.jp/~ax2s-kmtn/internet/rdf/REC-sparql11-query-20130321.html
 
 ## WikidataのSPARQLエンドポイント（検索用API）
