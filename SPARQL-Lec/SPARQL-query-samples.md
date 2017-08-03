@@ -1,6 +1,20 @@
 
+# 必要なリンク集
+## WikidataのSPARQLエンドポイント（検索用API）
+https://query.wikidata.org/
 
-#  関心のあるリソースのIRIを探す
+## PREFIXの検索サービス
+https://prefix.cc/
+
+## Wikidataのクラス一覧
+https://docs.google.com/spreadsheets/d/1e2r9w-PnAroO4MTAMJGfw-bZV7r68Xul-UtK6QbrK_w/edit#gid=0
+
+## Wikidataのプロパティ一覧（抜粋）
+https://www.wikidata.org/wiki/Wikidata:List_of_properties
+
+---
+
+# 関心のあるリソースのIRIを探す
 
 例）大阪大学のWikidata上でのIRI　　
 
