@@ -258,7 +258,7 @@ select (count (?s) AS ?c) where {
 ```PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-select ?univ ?univl　(count(?s) As ?c) where {
+select ?univ ?univl (count(?s) As ?c) where {
   ?univ wdt:P31 wd:Q3918.
   ?s wdt:P69 ?univ.
   OPTIONAL{
