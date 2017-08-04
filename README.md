@@ -11,7 +11,7 @@ https://goo.gl/forms/ue2OeBOlM876nBqh1
 　　講演資料：[PDF](https://github.com/KnowledgeGraphJapan/LODws1st/blob/master/LOD-WS-tokyo-Overview-20170803.pdf), [PPTX](https://github.com/KnowledgeGraphJapan/LODws1st/blob/master/LOD-WS-tokyo-Overview-20170803.pptx)
 ## DBpedia Japaneseと日本語LODの広がり
 　　加藤文彦（国立情報学研究所）
-   講演資料[PDF](DBpediaJapanese-LOD.pdf), [SpeakerDeck](https://speakerdeck.com/fumi/dbpeida-and-lod-in-japanese)
+   講演資料：[PDF](DBpediaJapanese-LOD.pdf), [SpeakerDeck](https://speakerdeck.com/fumi/dbpeida-and-lod-in-japanese)
 ## ライフサイエンス分野データの可視化と共有化
 　　山本泰智（ライフサイエンス統合データベースセンター）
 ## 生命科学とLOD－理研メタデータベースを活用したデータ利活用の実際
