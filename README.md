@@ -15,7 +15,8 @@ https://goo.gl/forms/ue2OeBOlM876nBqh1
 ## ライフサイエンス分野データの可視化と共有化
 　　山本泰智（ライフサイエンス統合データベースセンター）
 ## 生命科学とLOD－理研メタデータベースを活用したデータ利活用の実際
-　　小林紀郎（理化学研究所 情報基盤センター）
+　　小林紀郎（理化学研究所 情報基盤センター）　
+    講演資料：[PDF](https://github.com/KnowledgeGraphJapan/LODws1st/blob/master/理研メタデータベース_LODWS.pdf)
 
 # ハンズオンセッション
 ## スケジュール概要
