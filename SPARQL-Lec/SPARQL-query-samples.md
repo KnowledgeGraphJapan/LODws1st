@@ -32,7 +32,7 @@ https://docs.google.com/spreadsheets/d/1e2r9w-PnAroO4MTAMJGfw-bZV7r68Xul-UtK6Qbr
 「大阪大学」を主語（Subject）に含むトリプルの述語（?p）と目的語（?o）を取得する　
 
 ```
-select *
+select ?p ?o
 where {
    <http://www.wikidata.org/entity/Q651233> ?p ?o .
 }
